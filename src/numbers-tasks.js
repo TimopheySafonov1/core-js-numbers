@@ -613,7 +613,9 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -1, 1 => -1 | 0 | 1
  */
 function getRandomInteger(min, max) {
-  return Math.random() * (max - min) + min;
+  const minCeil = Math.ceil(min);
+  const maxCeil = Math.floor(max);
+  return Math.floor(Math.random() * (maxCeil - minCeil) + minCeil);
 }
 
 /**
@@ -635,7 +637,7 @@ function getHypotenuse(a, b) {
  * The resulting number is taken into account.
  *
  * @param {number} number
- * @return {number}
+ * @return {numbe r}
  *
  * @example:
  * 4  => 2
